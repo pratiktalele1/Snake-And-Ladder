@@ -26,23 +26,35 @@ public class GameOperations {
 		switch (option) {
 		case 1:{
 			//No play
-			System.out.println("no play - "+startPosition+" location");
+			System.out.println("no play player at - "+startPosition);
 			break;
 			}
 		case 2:{
 			//next position
 			startPosition=startPosition+diesNumber;
-			System.out.println("next location - "+startPosition);
+			if(startPosition>=100) {
+				startPosition=100;
+			}
+			System.out.println("next location of player - "+startPosition);
+			
 			break;
 			}
 		case 3:{
 			//snake bite
 			startPosition=startPosition-diesNumber;
-			System.out.println(startPosition);
+			if(startPosition<=0) {
+				startPosition=0;
+			}
+			System.out.println("player at - "+startPosition);
 			break;
 			}
 		}
+		if(startPosition!=100)
+		{
+		roll();
+		}else {
+			System.out.println("player won with : "+count+" moves");
+		}
 	}
 		
-	
 }
