@@ -53,7 +53,7 @@ public class GameOperations {
 		{
 		roll();
 		}else {
-			System.out.println("player won with : "+count+" moves");
+			//System.out.println("player won with : "+count+" moves");
 		}
 	}
 		
