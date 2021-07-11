@@ -5,11 +5,43 @@ import java.util.Random;
 public class GameOperations {
 	public static int startPosition;
 	public static int previousPosition;
+	public static int diesNumber;
 	public static int count=0;
 	
 	public static void roll() {
-		previousPosition=startPosition;
-		startPosition=(int)Math.floor(Math.random()*6+1);
+		
+		diesNumber=(int)Math.floor(Math.random()*6+1);
+		System.out.println("dies got -"+diesNumber);
+		count++;
+		option();
+	}
+	
+	public static void option() {
+		int option=(int)Math.floor(Math.random()*3+1);
+		nextMove(option);
+	}
+	
+	public static void nextMove(int option) {
+		
+		switch (option) {
+		case 1:{
+			//No play
+			System.out.println("no play - "+startPosition+" location");
+			break;
+			}
+		case 2:{
+			//next position
+			startPosition=startPosition+diesNumber;
+			System.out.println("next location - "+startPosition);
+			break;
+			}
+		case 3:{
+			//snake bite
+			startPosition=startPosition-diesNumber;
+			System.out.println(startPosition);
+			break;
+			}
+		}
 	}
 		
 	
