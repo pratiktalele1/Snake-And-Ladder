@@ -32,9 +32,7 @@ public class GameOperations {
 		case 2:{
 			//next position
 			startPosition=startPosition+diesNumber;
-			if(startPosition>=100) {
-				startPosition=100;
-			}
+			
 			System.out.println("next location of player - "+startPosition);
 			
 			break;
