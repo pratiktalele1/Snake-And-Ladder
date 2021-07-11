@@ -7,6 +7,14 @@ public class GameOperations {
 	public static int previousPosition;
 	public static int diesNumber;
 	public static int count=0;
+	public static int player1=0;
+	public static int player2=0;
+	
+	public GameOperations() {
+		while(player1!=100||player2!=100) {
+			roll();
+		}
+	}
 	
 	public static void roll() {
 		
@@ -52,8 +60,6 @@ public class GameOperations {
 		if(startPosition!=100)
 		{
 		roll();
-		}else {
-			System.out.println("player won with :- "+count+" moves");
 		}
 	}
 		
